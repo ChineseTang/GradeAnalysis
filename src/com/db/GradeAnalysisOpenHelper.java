@@ -35,7 +35,7 @@ public class GradeAnalysisOpenHelper extends SQLiteOpenHelper {
 	 * @param version1
 	 */
 	
-	public static final String CREATE_ART = "create table Art (aid integer primary key autoincrement,usid integer,aChinese double,aMath double,aEnglish double,aPolitics double,aHistory double,aGeology double,aTotal double,aTime varchar(64))";
+	public static final String CREATE_ART = "create table Art (aid integer primary key autoincrement,usid integer,aChinese double,aMath double,aEnglish double,aPolitics double,aHistory double,aGeology double,aTotal double,aTime varchar(64),aSearchTime long)";
 	
 	/**
 	 * Science table
@@ -45,7 +45,7 @@ public class GradeAnalysisOpenHelper extends SQLiteOpenHelper {
 	 * @param version1
 	 */
 	
-	public static final String CREATE_SCIENCE = "create table Science (sid integer primary key autoincrement,usid integer,sChinese double,sMath double,sEnglish double,sPhysics double,sChemistry double,sBiology double,sTotal double,sTime varchar(64))";
+	public static final String CREATE_SCIENCE = "create table Science (sid integer primary key autoincrement,usid integer,sChinese double,sMath double,sEnglish double,sPhysics double,sChemistry double,sBiology double,sTotal double,sTime varchar(64),sSearchTime long)";
 	public GradeAnalysisOpenHelper(Context context, String name,
 			CursorFactory factory, int version) {
 		super(context, name, factory, version);

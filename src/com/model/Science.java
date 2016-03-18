@@ -1,5 +1,7 @@
 package com.model;
 
+import java.util.Date;
+
 public class Science {
 	//理科类
 	private int sid;
@@ -12,6 +14,16 @@ public class Science {
 	private double sBiology;
 	private double sTotal;
 	private String sTime;//时间
+	private long sSearchTime;//查询功能按时间排序
+	
+	
+	
+	public long getsSearchTime() {
+		return sSearchTime;
+	}
+	public void setsSearchTime(long sSearchTime) {
+		this.sSearchTime = sSearchTime;
+	}
 	public int getSid() {
 		return sid;
 	}

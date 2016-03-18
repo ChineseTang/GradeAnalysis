@@ -1,5 +1,7 @@
 package com.model;
 
+import java.util.Date;
+
 public class Art {
 	//文科类
 	private int aid;
@@ -12,6 +14,15 @@ public class Art {
 	private double aGeology;
 	private double aTotal;
 	private String aTime;//时间
+	private long aSearchTime;//查询功能按时间排序
+	
+	
+	public long getaSearchTime() {
+		return aSearchTime;
+	}
+	public void setaSearchTime(long aSearchTime) {
+		this.aSearchTime = aSearchTime;
+	}
 	public int getAid() {
 		return aid;
 	}

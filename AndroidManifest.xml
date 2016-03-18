@@ -35,6 +35,18 @@
             android:name="com.ui.WelcomeActivity"
             android:label="@string/title_activity_welcome" >
         </activity>
+        <activity
+            android:name="com.ui.ScienceActivity"
+            android:label="@string/title_activity_science" >
+        </activity>
+        <activity
+            android:name="com.ui.AddGradeActivity"
+            android:label="@string/title_activity_add_grade" >
+        </activity>
+        <activity
+            android:name="com.ui.AddScienceActivity"
+            android:label="@string/title_activity_add_science" >
+        </activity>
     </application>
 
 </manifest>

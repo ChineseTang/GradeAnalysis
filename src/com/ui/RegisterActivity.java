@@ -1,5 +1,7 @@
 package com.ui;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,10 +13,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Toast;
-
 import com.controller.InforController;
-import com.controller.MyApplication;
-
 public class RegisterActivity extends BaseActivity {
 	private Button regbtn;
 	private EditText reUsername;//用户名唯一性
@@ -27,7 +26,7 @@ public class RegisterActivity extends BaseActivity {
 	private String username;
 	private String pwd;
 	private String rpwd;
-	private String type;//文科还是理科
+	private String type = "文科";//文科还是理科
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -62,21 +61,61 @@ public class RegisterActivity extends BaseActivity {
 				pwd = rePwd.getText().toString();
 				rpwd = rrePwd.getText().toString();
 				
-				if(username == null || pwd == null || rpwd == null) {
-					Toast.makeText(MyApplication.getContext(), "信息不能为空", Toast.LENGTH_LONG);
+				if(username == null || username.equals("")|| pwd == null || pwd.equals("")|| rpwd == null || rpwd.equals("")) {
+					AlertDialog.Builder dialog = new AlertDialog.Builder(RegisterActivity.this);
+					dialog.setTitle("注册失败");
+					dialog.setMessage("用户名或密码不能为空");
+					dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface arg0, int arg1) {
+							// TODO Auto-generated method stub
+							
+						}
+					});
+					dialog.show();
 				}else if(!pwd.equals(rpwd)) {
-					Toast.makeText(MyApplication.getContext(), "密码应该相同", Toast.LENGTH_LONG);
+					AlertDialog.Builder dialog = new AlertDialog.Builder(RegisterActivity.this);
+					dialog.setTitle("注册失败");
+					dialog.setMessage("两次密码应该相同");
+					dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface arg0, int arg1) {
+							// TODO Auto-generated method stub
+							
+						}
+					});
+					dialog.show();
 				}else {
 					//信息无错误，插入数据库，传输username,pwd
 				    boolean rs = new InforController().insertUser(username,pwd,type);
 				    if(rs) {
 				    	//如果插入成功，跳转到登录界面
-				    	System.out.println("insert successsfully");
+				    	AlertDialog.Builder dialog = new AlertDialog.Builder(RegisterActivity.this);
+						dialog.setTitle("注册成功");
+						dialog.setMessage("点击进入登录页面");
+						dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface arg0, int arg1) {
+								// TODO Auto-generated method stub
+								
+							}
+						});
+						dialog.show();
 				    	Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
 				    	startActivity(intent);
-				    	
+				    	finish();
 				    }else {
-				    	Toast.makeText(MyApplication.getContext(), "注册失败", Toast.LENGTH_LONG);
+				    	AlertDialog.Builder dialog = new AlertDialog.Builder(RegisterActivity.this);
+						dialog.setTitle("注册失败");
+						dialog.setMessage("注册信息有错误");
+						dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface arg0, int arg1) {
+								// TODO Auto-generated method stub
+								
+							}
+						});
+						dialog.show();
 				    }
 				}
 			}

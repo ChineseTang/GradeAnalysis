@@ -7,5 +7,17 @@
     <string name="title_activity_base">BaseActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_activity_science">ScienceActivity</string>
+    <string name="title_activity_add_grade">AddGradeActivity</string>
+    <string name="chinese">语文</string>
+    <string name="math">数学</string>
+    <string name="english">英语</string>
+    <string name="politics">政治</string>
+    <string name="history">历史</string>
+    <string name="geography">地理</string>
+    <string name="physical">物理</string>
+    <string name="chemistry">化学</string>
+    <string name="biology">生物</string>
+    <string name="title_activity_add_science">AddScienceActivity</string>
 
 </resources>
