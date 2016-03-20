@@ -1,14 +1,20 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".MainActivity" 
     >
-
+	<com.ui.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></com.ui.TitleLayout>
     <TextView 
     android:id="@+id/tUsername"
-    android:text="用户名"
+    android:text="学生姓名"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     />
@@ -16,7 +22,7 @@
     android:id="@+id/eUsername"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:hint="请输入用户名"
+    android:hint="请输入学生姓名"
     />
 
     <TextView 
@@ -46,3 +52,4 @@
 	    android:layout_height="wrap_content"
 	    />
 </LinearLayout>
+</ScrollView>

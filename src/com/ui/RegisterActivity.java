@@ -96,13 +96,14 @@ public class RegisterActivity extends BaseActivity {
 							@Override
 							public void onClick(DialogInterface arg0, int arg1) {
 								// TODO Auto-generated method stub
-								
+								Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
+						    	startActivity(intent);
+						    	finish();
 							}
 						});
 						dialog.show();
-				    	Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
-				    	startActivity(intent);
-				    	finish();
+						
+				    	
 				    }else {
 				    	AlertDialog.Builder dialog = new AlertDialog.Builder(RegisterActivity.this);
 						dialog.setTitle("×¢²áÊ§°Ü");
