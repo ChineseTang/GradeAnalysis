@@ -47,6 +47,10 @@
             android:name="com.ui.AddScienceActivity"
             android:label="@string/title_activity_add_science" >
         </activity>
+        <activity
+            android:name="com.ui.ShowActivity"
+            android:label="@string/title_activity_show" >
+        </activity>
     </application>
 
 </manifest>

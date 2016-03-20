@@ -90,7 +90,7 @@ public class AddScienceActivity extends BaseActivity {
 						dbiology = Double.parseDouble(sbiology);
 						
 						dtotal = dchinese + dmath + denglish + dphysical + dchemistry + dbiology;
-						DateFormat format= new SimpleDateFormat("yyyy年MM月dd日 HH时mm分");  
+						DateFormat format= new SimpleDateFormat("MM月dd日");  
 						
 						Science sci = new Science();
 						sci.setsChinese(dchinese);

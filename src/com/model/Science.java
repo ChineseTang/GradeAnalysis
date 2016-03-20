@@ -1,6 +1,5 @@
 package com.model;
 
-import java.util.Date;
 
 public class Science {
 	//Àí¿ÆÀà

@@ -37,6 +37,13 @@ public class ScienceActivity extends BaseActivity implements OnClickListener{
 		
 		tv.setText("欢迎  " + MyApplication.getUser().getuName() + " 同学" + ":" + MyApplication.getUser().getuType());
 		addgradebtn.setOnClickListener(this);
+		searchChinesebtn.setOnClickListener(this);
+		searchMathbtn.setOnClickListener(this);
+		searchEnglishbtn.setOnClickListener(this);
+		searchPhysicalbtn.setOnClickListener(this);
+		searchChemistrybtn.setOnClickListener(this);
+		searchBiologybtn.setOnClickListener(this);
+		searchTotalbtn.setOnClickListener(this);
 	}
 	@Override
 	public void onClick(View v) {
@@ -45,6 +52,41 @@ public class ScienceActivity extends BaseActivity implements OnClickListener{
 			//如果点击添加科目成绩按钮，那么跳转到一个新的界面
 			Intent intent = new Intent(ScienceActivity.this,AddScienceActivity.class);
 			startActivity(intent);
+			break;
+		case R.id.searchChinese:
+			Intent intent2 = new Intent(ScienceActivity.this,ShowActivity.class);
+			intent2.putExtra("subject", 8);
+			startActivity(intent2);
+			break;
+		case R.id.searchMath:
+			Intent intent3 = new Intent(ScienceActivity.this,ShowActivity.class);
+			intent3.putExtra("subject",9);
+			startActivity(intent3);
+			break;
+		case R.id.searchEnglish:
+			Intent intent4 = new Intent(ScienceActivity.this,ShowActivity.class);
+			intent4.putExtra("subject",10);
+			startActivity(intent4);
+			break;
+		case R.id.searchPhysical:
+			Intent intent5 = new Intent(ScienceActivity.this,ShowActivity.class);
+			intent5.putExtra("subject",11);
+			startActivity(intent5);
+			break;
+		case R.id.searchChemistry:
+			Intent intent6 = new Intent(ScienceActivity.this,ShowActivity.class);
+			intent6.putExtra("subject",12);
+			startActivity(intent6);
+			break;
+		case R.id.searchBiology:
+			Intent intent7 = new Intent(ScienceActivity.this,ShowActivity.class);
+			intent7.putExtra("subject",13);
+			startActivity(intent7);
+			break;
+		case R.id.searchTotal:
+			Intent intent8 = new Intent(ScienceActivity.this,ShowActivity.class);
+			intent8.putExtra("subject",14);
+			startActivity(intent8);
 			break;
 		default:
 			break;

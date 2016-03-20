@@ -19,5 +19,6 @@
     <string name="chemistry">化学</string>
     <string name="biology">生物</string>
     <string name="title_activity_add_science">AddScienceActivity</string>
+    <string name="title_activity_show">ShowActivity</string>
 
 </resources>

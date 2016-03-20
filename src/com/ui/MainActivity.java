@@ -10,7 +10,6 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.controller.InforController;
 import com.controller.MyApplication;
@@ -84,7 +83,6 @@ public class MainActivity extends BaseActivity {
 						dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
 							@Override
 							public void onClick(DialogInterface arg0, int arg1) {
-								// TODO Auto-generated method stub
 								
 							}
 						});

@@ -94,7 +94,7 @@ public class AddGradeActivity extends BaseActivity {
 					dgeography = Double.parseDouble(sgeography);
 					
 					dtotal = dchinese + dmath + denglish + dpolitics + dhistory + dgeography;
-					DateFormat format= new SimpleDateFormat("yyyy年MM月dd日 HH时mm分");   
+					DateFormat format= new SimpleDateFormat("MM月dd日");   
 					Art art = new Art();
 					art.setaChinese(dchinese);
 					art.setaMath(dmath);
