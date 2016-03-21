@@ -21,6 +21,8 @@
         android:id="@+id/addChinese"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="numberDecimal"
         android:hint="请输入语文成绩"
         />
      <TextView
@@ -32,6 +34,8 @@
         android:id="@+id/addMath"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="numberDecimal"
         android:hint="请输入数学成绩"
         /> 
     <TextView
@@ -43,6 +47,8 @@
         android:id="@+id/addEnglish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="numberDecimal"
         android:hint="请输入外语成绩"
         /> 
     <TextView
@@ -54,6 +60,8 @@
         android:id="@+id/addPolitics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="numberDecimal"
         android:hint="请输入政治成绩"
         /> 
     <TextView
@@ -65,6 +73,8 @@
         android:id="@+id/addHistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="numberDecimal"
         android:hint="请输入历史成绩"
         /> 
     <TextView
@@ -76,6 +86,8 @@
         android:id="@+id/addGeography"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="numberDecimal"
         android:hint="请输入地理成绩"
         /> 
     <Button 

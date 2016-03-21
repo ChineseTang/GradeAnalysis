@@ -8,10 +8,10 @@
     android:orientation="vertical"
     tools:context=".MainActivity" 
     >
-	<com.ui.TitleLayout
+	<com.ui.TitleNoLoginLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        ></com.ui.TitleLayout>
+        ></com.ui.TitleNoLoginLayout>
     <TextView 
     android:id="@+id/tUsername"
     android:text="学生姓名"

@@ -8,10 +8,10 @@
     android:layout_height="wrap_content"
 	android:orientation="vertical"
     tools:context=".RegisterActivity" >
-	<com.ui.TitleLayout
+	<com.ui.TitleNoLoginLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        ></com.ui.TitleLayout>
+        ></com.ui.TitleNoLoginLayout>
     <TextView 
     android:text="学生姓名"
     android:layout_width="wrap_content"
@@ -21,6 +21,7 @@
     android:id="@+id/reUsername"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:maxLines="1"
     android:hint="请输入学生姓名"
     />
 
@@ -34,6 +35,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:inputType="textPassword"
+    android:maxLines="1"
     android:hint="请输入账号密码"
     />
 	<TextView 
@@ -45,6 +47,7 @@
     android:id="@+id/rrePwd"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+ 	android:maxLines="1"
     android:inputType="textPassword"
     android:hint="请重新输入密码"
     />
