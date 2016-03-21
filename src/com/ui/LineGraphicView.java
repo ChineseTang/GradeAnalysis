@@ -49,7 +49,7 @@ public class LineGraphicView extends View
 	 */
 	private int averageValue;
 	private int marginTop = 20;
-	private int marginBottom = 40;
+	private int marginBottom = 30;
 
 	/**
 	 * 曲线上总点数
