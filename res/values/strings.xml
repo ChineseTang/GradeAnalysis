@@ -18,6 +18,18 @@
     <string name="physical">物理</string>
     <string name="chemistry">化学</string>
     <string name="biology">生物</string>
+    <string name="studentname">学生姓名</string>
+    <string name="inputstudentname">请输入学生姓名</string>
+    <string name="studentnamestrict">学生姓名最多12个字符</string>
+    <string name="numberpassword">账号密码</string>
+    <string name="numberpasswordinput">请输入账号密码</string>
+    <string name="numberpasswordstrict">密码最多有12个字符</string>
+    <string name="passwordreput">重新输入密码</string>
+    <string name="wenke">文科</string>
+    <string name="like">理科</string>
+    <string name="register">注册</string>
+    <string name="login">登录</string>
+    <string name="registertopic">没有账号？ 注册</string>
     <string name="title_activity_add_science">AddScienceActivity</string>
     <string name="title_activity_show">ShowActivity</string>
 

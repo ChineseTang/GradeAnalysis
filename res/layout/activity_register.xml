@@ -1,80 +1,119 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    	xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-
 <LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-	android:orientation="vertical"
-    tools:context=".RegisterActivity" >
-	<com.ui.TitleNoLoginLayout
+    android:layout_height="match_parent"
+    android:background="@layout/background_login"
+    android:orientation="vertical" >
+
+    <com.ui.TitleNoLoginLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.ui.TitleNoLoginLayout>
+
+    <RelativeLayout
+        android:id="@+id/login_div"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dip"
+        android:layout_weight="2"
+        android:background="@layout/background_login_div_bg"
+        android:padding="15dip" >
+
+        <TextView
+            android:id="@+id/login_user_input"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/studentname" />
+
+        <EditText
+            android:id="@+id/reUsername"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_user_input"
+            android:textSize="16sp"
+            android:maxLength="12"
+            android:maxLines="1"
+            android:hint="@string/studentnamestrict"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/login_password_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_below="@id/reUsername"
+            android:layout_marginTop="3dp"
+            android:text="@string/numberpassword" />
+
+        <EditText
+            android:id="@+id/rePwd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_password_input"
+            android:maxLines="1"
+            
+            android:hint="@string/numberpasswordstrict"
+            android:maxLength="12"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/re"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rePwd"
+            android:textSize="16sp"
+            android:layout_marginTop="3dp"
+            android:text="@string/passwordreput" />
+
+        <EditText
+            android:id="@+id/rrePwd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_below="@id/re"
+            android:maxLength="12"
+            android:hint="@string/numberpasswordstrict"
+            android:inputType="textPassword" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textSize="16sp"
+            android:text="@string/wenke" />
+
+        <RadioButton
+            android:id="@+id/rscience"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:text="@string/like" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/registerbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        ></com.ui.TitleNoLoginLayout>
-    <TextView 
-    android:text="学生姓名"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    />
-	<EditText 
-    android:id="@+id/reUsername"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:maxLines="1"
-    android:hint="请输入学生姓名"
-    />
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/blue_button"
+        android:text="@string/register" />
 
-    <TextView 
-    android:text="账号密码"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    />
-	<EditText 
-    android:id="@+id/rePwd"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:inputType="textPassword"
-    android:maxLines="1"
-    android:hint="请输入账号密码"
-    />
-	<TextView 
-    android:text="再输入密 码"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    />
-	<EditText 
-    android:id="@+id/rrePwd"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
- 	android:maxLines="1"
-    android:inputType="textPassword"
-    android:hint="请重新输入密码"
-    />
-	<RadioGroup
-	    android:id="@+id/subject"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:orientation="vertical"
-	 >
-	    <RadioButton 
-	       android:id="@+id/rart"
-	       android:layout_width="wrap_content"
-	       android:layout_height="wrap_content"
-	       android:checked="true"
-	       android:text="文科"/>
-	    <RadioButton 
-	       android:id="@+id/rscience"
-	       android:layout_width="wrap_content"
-	       android:layout_height="wrap_content"
-	       android:text="理科"/>
-	</RadioGroup>   
-	
-	<Button
-	    android:id="@+id/registerbtn"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="注册"
-	    />
 </LinearLayout>
-</ScrollView>

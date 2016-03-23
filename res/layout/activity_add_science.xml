@@ -1,99 +1,245 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    	xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-<LinearLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:context=".AddScienceActivity" >
-	<com.ui.TitleLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@layout/background_login"
+    android:fillViewport="false" >
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        ></com.ui.TitleLayout>
-	 <TextView
-        android:text="@string/chinese"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-	/>
-    <EditText 
-        android:id="@+id/addChinese"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:inputType="numberDecimal"
-        android:hint="请输入语文成绩"
-        />
-     <TextView
-        android:text="@string/math"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-	/>
-    <EditText 
-        android:id="@+id/addMath"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:inputType="numberDecimal"
-        android:hint="请输入数学成绩"
-        /> 
-    <TextView
-        android:text="@string/english"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-	/>
-    <EditText 
-        android:id="@+id/addEnglish"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:inputType="numberDecimal"
-        android:hint="请输入外语成绩"
-        /> 
-    <TextView
-        android:text="@string/physical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-	/>
-    <EditText 
-        android:id="@+id/addPhysical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:inputType="numberDecimal"
-        android:hint="请输入物理成绩"
-        /> 
-    <TextView
-        android:text="@string/chemistry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-	/>
-    <EditText 
-        android:id="@+id/addChemistry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:inputType="numberDecimal"
-        android:hint="请输入化学成绩"
-        /> 
-    <TextView
-        android:text="@string/biology"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-	/>
-    <EditText 
-        android:id="@+id/addBiology"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:inputType="numberDecimal"
-        android:hint="请输入生物成绩"
-        /> 
-    <Button 
-        android:id="@+id/addSGrade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="添加"
-        />
-</LinearLayout>
+        android:orientation="vertical"
+        tools:context=".AddScienceActivity" >
+
+        <com.ui.TitleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </com.ui.TitleLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@layout/background_login"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="13dp"
+                    android:text="@string/chinese"
+                    android:textSize="8pt" />
+
+                <EditText
+                    android:id="@+id/addChinese"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="3"
+                    android:hint="请输入语文成绩"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:maxLength="20"
+                    android:paddingLeft="10dp"
+                    android:textColor="#666"
+                    android:textSize="8pt" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@drawable/shape_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="15dp"
+                    android:text="@string/math"
+                    android:textSize="8pt" />
+
+                <EditText
+                    android:id="@+id/addMath"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="3"
+                    android:hint="请输入数学成绩"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:maxLength="20"
+                    android:paddingLeft="10dp"
+                    android:textColor="#666"
+                    android:textSize="8pt" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@drawable/shape_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="15dp"
+                    android:text="@string/english"
+                    android:textSize="8pt" />
+
+                <EditText
+                    android:id="@+id/addEnglish"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="3"
+                    android:hint="请输入英语成绩"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:maxLength="20"
+                    android:paddingLeft="10dp"
+                    android:textColor="#666"
+                    android:textSize="8pt" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@drawable/shape_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="15dp"
+                    android:text="@string/physical"
+                    android:textSize="8pt" />
+
+                <EditText
+                    android:id="@+id/addPhysical"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="3"
+                    android:hint="请输入物理成绩"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:maxLength="20"
+                    android:paddingLeft="10dp"
+                    android:textColor="#666"
+                    android:textSize="8pt" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@drawable/shape_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="15dp"
+                    android:text="@string/chemistry"
+                    android:textSize="8pt" />
+
+                <EditText
+                    android:id="@+id/addChemistry"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="3"
+                    android:hint="请输入化学成绩"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:maxLength="20"
+                    android:paddingLeft="10dp"
+                    android:textColor="#666"
+                    android:textSize="8pt" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@drawable/shape_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="15dp"
+                    android:text="@string/biology"
+                    android:textSize="8pt" />
+
+                <EditText
+                    android:id="@+id/addBiology"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="3"
+                    android:hint="请输入生物成绩"
+                    android:inputType="numberDecimal"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:textColor="#666"
+                    android:textSize="8pt" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addSGrade"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+           	android:background="@drawable/blue_button"
+            android:text="添加" />
+    </LinearLayout>
+
 </ScrollView>

@@ -69,12 +69,10 @@ public class MainActivity extends BaseActivity {
 						//如果登录成功，如果是文科，则跳转到WelcomeActivity
 							Intent aintent = new Intent(MainActivity.this,WelcomeActivity.class);
 							startActivity(aintent);
-							finish();
 						}else{
 						//如果登录成功，如果是理科，则跳转到
 							Intent sintent = new Intent(MainActivity.this,ScienceActivity.class);
 							startActivity(sintent);
-							finish();
 						}
 					}else {
 						AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);

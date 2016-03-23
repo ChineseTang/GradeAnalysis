@@ -5,21 +5,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.controller.MyApplication;
 
 public class WelcomeActivity extends BaseActivity implements OnClickListener{
 	private TextView tv;
-	private Button addgradebtn;
-	private Button searchChinesebtn;
-	private Button searchMathbtn;
-	private Button searchEnglishbtn;
-	private Button searchPoliticsbtn;
-	private Button searchHistorybtn;
-	private Button searchGeologybtn;
-	private Button searchTotalbtn;
+	private ImageBtnLayout addgradebtn;
+	private ImageBtnLayout searchChinesebtn;
+	private ImageBtnLayout searchMathbtn;
+	private ImageBtnLayout searchEnglishbtn;
+	private ImageBtnLayout searchPoliticsbtn;
+	private ImageBtnLayout searchHistorybtn;
+	private ImageBtnLayout searchGeologybtn;
+	private ImageBtnLayout searchTotalbtn;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -27,16 +27,18 @@ public class WelcomeActivity extends BaseActivity implements OnClickListener{
 		setContentView(R.layout.activity_welcome);
 		
 		tv = (TextView) findViewById(R.id.susername);
-		addgradebtn = (Button) findViewById(R.id.addgrade);
-		searchChinesebtn = (Button) findViewById(R.id.searchChinese);
-		searchMathbtn = (Button) findViewById(R.id.searchMath);
-		searchEnglishbtn = (Button) findViewById(R.id.searchEnglish);
-		searchPoliticsbtn = (Button) findViewById(R.id.searchPolitics);
-		searchHistorybtn = (Button) findViewById(R.id.searchHistory);
-		searchGeologybtn = (Button) findViewById(R.id.searchGeology);
-		searchTotalbtn = (Button) findViewById(R.id.searchTotal);
+		addgradebtn = (ImageBtnLayout) findViewById(R.id.addgrade);
+		searchChinesebtn = (ImageBtnLayout) findViewById(R.id.searchChinese);
+		searchMathbtn = (ImageBtnLayout) findViewById(R.id.searchMath);
+		searchEnglishbtn = (ImageBtnLayout) findViewById(R.id.searchEnglish);
+		searchPoliticsbtn = (ImageBtnLayout) findViewById(R.id.searchPolitics);
+		searchHistorybtn = (ImageBtnLayout) findViewById(R.id.searchHistory);
+		searchGeologybtn = (ImageBtnLayout) findViewById(R.id.searchGeology);
+		searchTotalbtn = (ImageBtnLayout) findViewById(R.id.searchTotal);
 		
-		tv.setText("欢迎  " + MyApplication.getUser().getuName() + " 同学" + ":" + MyApplication.getUser().getuType());
+		tv.setText("欢迎  " + MyApplication.getUser().getuName() + " 同学: "+ MyApplication.getUser().getuType());
+		Toast.makeText(WelcomeActivity.this, "欢迎  " + MyApplication.getUser().getuName() + " 同学", Toast.LENGTH_SHORT).show();
+		
 		addgradebtn.setOnClickListener(this);
 		searchChinesebtn.setOnClickListener(this);
 		searchMathbtn.setOnClickListener(this);
@@ -45,6 +47,27 @@ public class WelcomeActivity extends BaseActivity implements OnClickListener{
 		searchHistorybtn.setOnClickListener(this);
 		searchGeologybtn.setOnClickListener(this);
 		searchTotalbtn.setOnClickListener(this);
+		
+		/* 图片设置 */
+		addgradebtn.setImageResource(R.drawable.btn_add);
+		searchChinesebtn.setImageResource(R.drawable.btn_chinese);
+		searchMathbtn.setImageResource(R.drawable.btn_math);
+		searchEnglishbtn.setImageResource(R.drawable.btn_english);
+		searchPoliticsbtn.setImageResource(R.drawable.btn_politic);
+		searchHistorybtn.setImageResource(R.drawable.btn_history);
+		searchGeologybtn.setImageResource(R.drawable.btn_geography);
+		searchTotalbtn.setImageResource(R.drawable.btn_total);
+		
+		/* text设置 */
+		addgradebtn.setText("添加成绩");
+		searchChinesebtn.setText("语文成绩");
+		searchMathbtn.setText("数学成绩");
+		searchEnglishbtn.setText("英语成绩");
+		searchPoliticsbtn.setText("政治成绩");
+		searchHistorybtn.setText("历史成绩");
+		searchGeologybtn.setText("地理成绩");
+		searchTotalbtn.setText("总成绩");
+		
 	}
 	@Override
 	public void onClick(View v) {

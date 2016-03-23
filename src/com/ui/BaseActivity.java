@@ -4,6 +4,7 @@ import com.controller.ActivityCollector;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.util.Log;
 
 public class BaseActivity extends Activity {
@@ -11,6 +12,7 @@ public class BaseActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//…Ë÷√app º÷’ ˙∆¡
 		Log.d("BaseActivity", getClass().getSimpleName());//print the BaseActivity
 		ActivityCollector.addActivity(this);
 	}

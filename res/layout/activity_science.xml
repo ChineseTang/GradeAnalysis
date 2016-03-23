@@ -1,71 +1,136 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    	xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-<LinearLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:context=".ScienceActivity" >
-	<com.ui.TitleLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@layout/background_login">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        ></com.ui.TitleLayout>
-   <TextView
-        android:id="@+id/susername"
-        android:layout_marginTop="5dip"
-        android:layout_marginLeft="5dip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-      />
-	<Button 
-	    android:id="@+id/addgrade"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="添加科目成绩"
-	    />
-	<Button 
-	    android:id="@+id/searchChinese"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="查询语文成绩"
-	    />
-	<Button 
-	    android:id="@+id/searchMath"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="查询数学成绩"
-	    />
-	<Button 
-	    android:id="@+id/searchEnglish"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="查询英语成绩"
-	    />
-	<Button 
-	    android:id="@+id/searchPhysical"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="查询物理成绩"
-	    />
-	<Button 
-	    android:id="@+id/searchChemistry"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="查询化学成绩"
-	    />
-	<Button 
-	    android:id="@+id/searchBiology"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="查询生物成绩"
-	    />
-	<Button 
-	    android:id="@+id/searchTotal"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="查询总的成绩"
-	    />
+        android:orientation="vertical"
+        tools:context=".ScienceActivity" >
 
-</LinearLayout>
+        <com.ui.TitleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </com.ui.TitleLayout>
+
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+	        
+	        <TextView
+	            android:id="@+id/susername"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="5dip"
+	            android:layout_marginLeft="5dip"
+	            android:textSize="16sp"
+                android:layout_marginBottom="8dip"
+	            android:layout_alignParentLeft="true" />
+            
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="#ff005484" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="#ff0883cb" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+        	android:layout_marginRight="5dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <com.ui.ImageBtnLayout
+                    android:id="@+id/addgrade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <com.ui.ImageBtnLayout
+                    android:id="@+id/searchChinese"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <com.ui.ImageBtnLayout
+                    android:id="@+id/searchMath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="75dp"
+                android:paddingRight="75dp" >
+
+                <com.ui.ImageBtnLayout
+                    android:id="@+id/searchEnglish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <com.ui.ImageBtnLayout
+                    android:id="@+id/searchPhysical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true" />
+                
+                <com.ui.ImageBtnLayout 
+                    android:id="@+id/searchTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    />
+                
+                
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <com.ui.ImageBtnLayout
+                    android:id="@+id/searchBiology"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"/>
+                
+                <com.ui.ImageBtnLayout
+                    android:id="@+id/searchChemistry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
 </ScrollView>

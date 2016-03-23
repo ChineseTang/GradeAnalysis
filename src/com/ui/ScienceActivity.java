@@ -7,35 +7,37 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ScienceActivity extends BaseActivity implements OnClickListener{
 	private TextView tv;
-	private Button addgradebtn;
-	private Button searchChinesebtn;
-	private Button searchMathbtn;
-	private Button searchEnglishbtn;
-	private Button searchPhysicalbtn;
-	private Button searchChemistrybtn;
-	private Button searchBiologybtn;
-	private Button searchTotalbtn;
+	private ImageBtnLayout addgradebtn;
+	private ImageBtnLayout searchChinesebtn;
+	private ImageBtnLayout searchMathbtn;
+	private ImageBtnLayout searchEnglishbtn;
+	private ImageBtnLayout searchPhysicalbtn;
+	private ImageBtnLayout searchChemistrybtn;
+	private ImageBtnLayout searchBiologybtn;
+	private ImageBtnLayout searchTotalbtn;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_science);
 		tv = (TextView) findViewById(R.id.susername);
-		addgradebtn = (Button) findViewById(R.id.addgrade);
-		searchChinesebtn = (Button) findViewById(R.id.searchChinese);
-		searchMathbtn = (Button) findViewById(R.id.searchMath);
-		searchEnglishbtn = (Button) findViewById(R.id.searchEnglish);
-		searchPhysicalbtn = (Button) findViewById(R.id.searchPhysical);
-		searchChemistrybtn = (Button) findViewById(R.id.searchChemistry);
-		searchBiologybtn = (Button) findViewById(R.id.searchBiology);
-		searchTotalbtn = (Button) findViewById(R.id.searchTotal);
+		addgradebtn = (ImageBtnLayout) findViewById(R.id.addgrade);
+		searchChinesebtn = (ImageBtnLayout) findViewById(R.id.searchChinese);
+		searchMathbtn = (ImageBtnLayout) findViewById(R.id.searchMath);
+		searchEnglishbtn = (ImageBtnLayout) findViewById(R.id.searchEnglish);
+		searchPhysicalbtn = (ImageBtnLayout) findViewById(R.id.searchPhysical);
+		searchChemistrybtn = (ImageBtnLayout) findViewById(R.id.searchChemistry);
+		searchBiologybtn = (ImageBtnLayout) findViewById(R.id.searchBiology);
+		searchTotalbtn = (ImageBtnLayout) findViewById(R.id.searchTotal);
 		
-		tv.setText("欢迎  " + MyApplication.getUser().getuName() + " 同学" + ":" + MyApplication.getUser().getuType());
+		tv.setText("欢迎  " + MyApplication.getUser().getuName() + " 同学: "+ MyApplication.getUser().getuType());
+		Toast.makeText(ScienceActivity.this, "欢迎  " + MyApplication.getUser().getuName() + " 同学", Toast.LENGTH_LONG).show();
+		
 		addgradebtn.setOnClickListener(this);
 		searchChinesebtn.setOnClickListener(this);
 		searchMathbtn.setOnClickListener(this);
@@ -44,6 +46,27 @@ public class ScienceActivity extends BaseActivity implements OnClickListener{
 		searchChemistrybtn.setOnClickListener(this);
 		searchBiologybtn.setOnClickListener(this);
 		searchTotalbtn.setOnClickListener(this);
+		
+		/* 图片设置 */
+		addgradebtn.setImageResource(R.drawable.btn_add);
+		searchChinesebtn.setImageResource(R.drawable.btn_chinese);
+		searchMathbtn.setImageResource(R.drawable.btn_math);
+		searchEnglishbtn.setImageResource(R.drawable.btn_english);
+		searchPhysicalbtn.setImageResource(R.drawable.btn_physical);
+		searchChemistrybtn.setImageResource(R.drawable.btn_chemistry);
+		searchBiologybtn.setImageResource(R.drawable.btn_biology);
+		searchTotalbtn.setImageResource(R.drawable.btn_total);
+		
+		/* text设置 */
+		addgradebtn.setText("成绩添加");
+		searchChinesebtn.setText("语文成绩");
+		searchMathbtn.setText("数学成绩");
+		searchEnglishbtn.setText("英语成绩");
+		searchPhysicalbtn.setText("物理成绩");
+		searchChemistrybtn.setText("化学成绩");
+		searchBiologybtn.setText("生物成绩");
+		searchTotalbtn.setText("总成绩");
+		
 	}
 	@Override
 	public void onClick(View v) {

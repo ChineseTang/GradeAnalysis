@@ -105,7 +105,7 @@ public class LineGraphicView extends View
 	protected void onDraw(Canvas canvas)
 	{
 		mPaint.setColor(res.getColor(R.color.color_f2f2f2));
-
+		//mPaint.setColor(R.layout.background_login);
 		drawAllXLine(canvas);
 		// »­Ö±Ïß£¨×ÝÏò£©
 		drawAllYLine(canvas);
