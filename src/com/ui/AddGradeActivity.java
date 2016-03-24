@@ -55,6 +55,12 @@ public class AddGradeActivity extends BaseActivity {
 		history = (EditText) findViewById(R.id.addHistory);
 		geography = (EditText) findViewById(R.id.addGeography);
 		
+		chinese.setText("0.0");
+		math.setText("0.0");
+		english.setText("0.0");
+		politics.setText("0.0");
+		history.setText("0.0");
+		geography.setText("0.0");
 		submit = (Button) findViewById(R.id.addGrade);
 		
 		submit.setOnClickListener(new OnClickListener() {
@@ -92,43 +98,14 @@ public class AddGradeActivity extends BaseActivity {
 					dpolitics = Double.parseDouble(spolitics);
 					dhistory = Double.parseDouble(shistory);
 					dgeography = Double.parseDouble(sgeography);
-					
+		
 					dtotal = dchinese + dmath + denglish + dpolitics + dhistory + dgeography;
-					DateFormat format= new SimpleDateFormat("yyyy.MM.dd");   
-					Art art = new Art();
-					art.setaChinese(dchinese);
-					art.setaMath(dmath);
-					art.setaEnglish(denglish);
-					art.setaPolitics(dpolitics);
-					art.setaHistory(dhistory);
-					art.setaGeology(dgeography);
-					art.setaTotal(dtotal);
-					art.setaTime(format.format(new Date()));
-					art.setaSearchTime(new Date().getTime());
-					//然后调用InforController 插入数据库中
-					boolean rs = new InforController().addArt(art);
-					if(rs) {
-						AlertDialog.Builder dialog = new AlertDialog.Builder(AddGradeActivity.this);
-						dialog.setTitle("添加成绩成功");
-						dialog.setMessage("本次成绩添加成功");
-						dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
-							@Override
-							public void onClick(DialogInterface arg0, int arg1) {
-								// TODO Auto-generated method stub
-								
-							}
-						});
-						dialog.show();
-						chinese.setText("");
-						math.setText("");
-						english.setText("");
-						politics.setText("");
-						history.setText("");
-						geography.setText("");
-					}else{
+					
+					//判断成绩范围，不能小于0分，不能大于150分
+					if(dchinese<0.0 || dchinese>150.0) {
 						AlertDialog.Builder dialog = new AlertDialog.Builder(AddGradeActivity.this);
 						dialog.setTitle("添加成绩失败");
-						dialog.setMessage("本次成绩添加失败");
+						dialog.setMessage("请将语文成绩输入到合适范围");
 						dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
 							@Override
 							public void onClick(DialogInterface arg0, int arg1) {
@@ -137,9 +114,122 @@ public class AddGradeActivity extends BaseActivity {
 							}
 						});
 						dialog.show();
+						chinese.requestFocus();
+					}else if(dmath<0.0 || dmath>150.0) {
+						AlertDialog.Builder dialog = new AlertDialog.Builder(AddGradeActivity.this);
+						dialog.setTitle("添加成绩失败");
+						dialog.setMessage("请将数学成绩输入到合适范围");
+						dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface arg0, int arg1) {
+								// TODO Auto-generated method stub
+								
+							}
+						});
+						dialog.show();
+						math.requestFocus();
+					}else if(denglish<0.0 || denglish>150.0) {
+						AlertDialog.Builder dialog = new AlertDialog.Builder(AddGradeActivity.this);
+						dialog.setTitle("添加成绩失败");
+						dialog.setMessage("请将英语成绩输入到合适范围");
+						dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface arg0, int arg1) {
+								// TODO Auto-generated method stub
+								
+							}
+						});
+						dialog.show();
+						english.requestFocus();
+					}else if(dpolitics<0.0 || dpolitics>100.0) {
+						AlertDialog.Builder dialog = new AlertDialog.Builder(AddGradeActivity.this);
+						dialog.setTitle("添加成绩失败");
+						dialog.setMessage("请将政治成绩输入到合适范围");
+						dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface arg0, int arg1) {
+								// TODO Auto-generated method stub
+								
+							}
+						});
+						dialog.show();
+						politics.requestFocus();
+					}else if(dhistory<0.0 || dhistory>100.0) {
+						AlertDialog.Builder dialog = new AlertDialog.Builder(AddGradeActivity.this);
+						dialog.setTitle("添加成绩失败");
+						dialog.setMessage("请将历史成绩输入到合适范围");
+						dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface arg0, int arg1) {
+								// TODO Auto-generated method stub
+								
+							}
+						});
+						dialog.show();
+						history.requestFocus();
+					}else if(dgeography<0.0 || dgeography>100.0) {
+						AlertDialog.Builder dialog = new AlertDialog.Builder(AddGradeActivity.this);
+						dialog.setTitle("添加成绩失败");
+						dialog.setMessage("请将地理成绩输入到合适范围");
+						dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface arg0, int arg1) {
+								// TODO Auto-generated method stub
+								
+							}
+						});
+						dialog.show();
+						geography.requestFocus();
+					}else{
+						DateFormat format= new SimpleDateFormat("yyyy.MM.dd");   
+						Art art = new Art();
+						art.setaChinese(dchinese);
+						art.setaMath(dmath);
+						art.setaEnglish(denglish);
+						art.setaPolitics(dpolitics);
+						art.setaHistory(dhistory);
+						art.setaGeology(dgeography);
+						art.setaTotal(dtotal);
+						art.setaTime(format.format(new Date()));
+						art.setaSearchTime(new Date().getTime());
+						//然后调用InforController 插入数据库中
+						boolean rs = new InforController().addArt(art);
+						if(rs) {
+							AlertDialog.Builder dialog = new AlertDialog.Builder(AddGradeActivity.this);
+							dialog.setTitle("添加成绩成功");
+							dialog.setMessage("本次成绩添加成功");
+							dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+							@Override
+								public void onClick(DialogInterface arg0, int arg1) {
+								// TODO Auto-generated method stub
+								
+								}
+							});
+							dialog.show();
+							chinese.setText("0.0");
+							math.setText("0.0");
+							english.setText("0.0");
+							politics.setText("0.0");
+							history.setText("0.0");
+							geography.setText("0.0");
+						}else{
+							AlertDialog.Builder dialog = new AlertDialog.Builder(AddGradeActivity.this);
+							dialog.setTitle("添加成绩失败");
+							dialog.setMessage("本次成绩添加失败");
+							dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+								@Override
+								public void onClick(DialogInterface arg0, int arg1) {
+								// TODO Auto-generated method stub
+								
+								}
+							});
+							dialog.show();
+						}
+					}
 					}
 				}
-			}
-		});
+			});
+		
 	}
+	
 }

@@ -130,7 +130,7 @@ public class InforController {
 		// 将查询的结果返回到ArrayList中
 		ArrayList<Art> al = new ArrayList<Art>();
 		String sql = "select aChinese,aTime from Art where usid=" + uid
-				+ " order by aSearchTime";
+				+ " and aChinese!=0.0 order by aSearchTime";
 		Cursor cs = db.rawQuery(sql, null);
 		try {
 			if (cs.moveToFirst()) {
@@ -164,7 +164,7 @@ public class InforController {
 		// 将查询的结果返回到ArrayList中
 		ArrayList<Art> al = new ArrayList<Art>();
 		String sql = "select aMath,aTime from Art where usid=" + uid
-				+ " order by aSearchTime";
+				+ " and aMath!=0.0 order by aSearchTime";
 		Cursor cs = db.rawQuery(sql, null);
 		try {
 			if (cs.moveToFirst()) {
@@ -197,7 +197,7 @@ public class InforController {
 		// 将查询的结果返回到ArrayList中
 		ArrayList<Art> al = new ArrayList<Art>();
 		String sql = "select aEnglish,aTime from Art where usid=" + uid
-				+ " order by aSearchTime";
+				+ " and aEnglish!=0.0 order by aSearchTime";
 		Cursor cs = db.rawQuery(sql, null);
 		try {
 			if (cs.moveToFirst()) {
@@ -231,7 +231,7 @@ public class InforController {
 		// 将查询的结果返回到ArrayList中
 		ArrayList<Art> al = new ArrayList<Art>();
 		String sql = "select aPolitics,aTime from Art where usid=" + uid
-				+ " order by aSearchTime";
+				+ " and aPolitics!=0.0 order by aSearchTime";
 		Cursor cs = db.rawQuery(sql, null);
 		try {
 			if (cs.moveToFirst()) {
@@ -265,7 +265,7 @@ public class InforController {
 		// 将查询的结果返回到ArrayList中
 		ArrayList<Art> al = new ArrayList<Art>();
 		String sql = "select aHistory,aTime from Art where usid=" + uid
-				+ " order by aSearchTime";
+				+ " and aHistory!=0.0 order by aSearchTime";
 		Cursor cs = db.rawQuery(sql, null);
 		try {
 			if (cs.moveToFirst()) {
@@ -299,7 +299,7 @@ public class InforController {
 		// 将查询的结果返回到ArrayList中
 		ArrayList<Art> al = new ArrayList<Art>();
 		String sql = "select aGeology,aTime from Art where usid=" + uid
-				+ " order by aSearchTime";
+				+ " and aGeology!=0.0 order by aSearchTime";
 		Cursor cs = db.rawQuery(sql, null);
 		try {
 			if (cs.moveToFirst()) {
@@ -332,18 +332,27 @@ public class InforController {
 		SQLiteDatabase db = ga.getConnection();
 		// 将查询的结果返回到ArrayList中
 		ArrayList<Art> al = new ArrayList<Art>();
-		String sql = "select aTotal,aTime from Art where usid=" + uid
+		String sql = "select aChinese,aMath,aEnglish,aPolitics,aHistory,aGeology,aTotal,aTime from Art where usid=" + uid
 				+ " order by aSearchTime";
 		Cursor cs = db.rawQuery(sql, null);
 		try {
 			if (cs.moveToFirst()) {
 				do {
+					double aChinese = cs.getDouble(cs.getColumnIndex("aChinese"));
+					double aMath = cs.getDouble(cs.getColumnIndex("aMath"));
+					double aEnglish = cs.getDouble(cs.getColumnIndex("aEnglish"));
+					double aPolitics = cs.getDouble(cs.getColumnIndex("aPolitics"));
+					double aHistory = cs.getDouble(cs.getColumnIndex("aHistory"));
+					double aGeology = cs.getDouble(cs.getColumnIndex("aGeology"));
 					double aTotal = cs.getDouble(cs.getColumnIndex("aTotal"));
 					String aTime = cs.getString(cs.getColumnIndex("aTime"));
-					Art art = new Art();
-					art.setaTotal(aTotal);
-					art.setaTime(aTime);
-					al.add(art);
+					if(aChinese!=0.0 && aMath!=0.0 && aEnglish!=0.0 && aPolitics!=0.0 && aHistory!=0.0 && aGeology!=0.0) {
+						Art art = new Art();
+						art.setaTotal(aTotal);
+						art.setaTime(aTime);
+						al.add(art);
+					}
+					
 				} while (cs.moveToNext());
 			}
 			cs.close();
@@ -366,7 +375,7 @@ public class InforController {
 		// 将查询的结果返回到ArrayList中
 		ArrayList<Science> al = new ArrayList<Science>();
 		String sql = "select sChinese,sTime from Science where usid=" + uid
-				+ " order by sSearchTime";
+				+ " and sChinese!=0.0 order by sSearchTime";
 		Cursor cs = db.rawQuery(sql, null);
 		try {
 			if (cs.moveToFirst()) {
@@ -400,7 +409,7 @@ public class InforController {
 		// 将查询的结果返回到ArrayList中
 		ArrayList<Science> al = new ArrayList<Science>();
 		String sql = "select sMath,sTime from Science where usid=" + uid
-				+ " order by sSearchTime";
+				+ " and sMath!=0.0 order by sSearchTime";
 		Cursor cs = db.rawQuery(sql, null);
 		try {
 			if (cs.moveToFirst()) {
@@ -433,7 +442,7 @@ public class InforController {
 		// 将查询的结果返回到ArrayList中
 		ArrayList<Science> al = new ArrayList<Science>();
 		String sql = "select sEnglish,sTime from Science where usid=" + uid
-				+ " order by sSearchTime";
+				+ " and sEnglish!=0.0 order by sSearchTime";
 		Cursor cs = db.rawQuery(sql, null);
 		try {
 			if (cs.moveToFirst()) {
@@ -467,7 +476,7 @@ public class InforController {
 		// 将查询的结果返回到ArrayList中
 		ArrayList<Science> al = new ArrayList<Science>();
 		String sql = "select sPhysics,sTime from Science where usid=" + uid
-				+ " order by sSearchTime";
+				+ " and sPhysics!=0.0 order by sSearchTime";
 		Cursor cs = db.rawQuery(sql, null);
 		try {
 			if (cs.moveToFirst()) {
@@ -501,7 +510,7 @@ public class InforController {
 		// 将查询的结果返回到ArrayList中
 		ArrayList<Science> al = new ArrayList<Science>();
 		String sql = "select sChemistry,sTime from Science where usid=" + uid
-				+ " order by sSearchTime";
+				+ " and sChemistry!=0.0 order by sSearchTime";
 		Cursor cs = db.rawQuery(sql, null);
 		try {
 			if (cs.moveToFirst()) {
@@ -535,7 +544,7 @@ public class InforController {
 		// 将查询的结果返回到ArrayList中
 		ArrayList<Science> al = new ArrayList<Science>();
 		String sql = "select sBiology,sTime from Science where usid=" + uid
-				+ " order by sSearchTime";
+				+ " and sBiology!=0.0 order by sSearchTime";
 		Cursor cs = db.rawQuery(sql, null);
 		try {
 			if (cs.moveToFirst()) {
@@ -568,18 +577,27 @@ public class InforController {
 		SQLiteDatabase db = ga.getConnection();
 		// 将查询的结果返回到ArrayList中
 		ArrayList<Science> al = new ArrayList<Science>();
-		String sql = "select sTotal,sTime from Science where usid=" + uid
+		String sql = "select sChinese,sMath,sEnglish,sPhysics,sChemistry,sBiology,sTotal,sTime from Science where usid=" + uid
 				+ " order by sSearchTime";
 		Cursor cs = db.rawQuery(sql, null);
 		try {
 			if (cs.moveToFirst()) {
 				do {
+					double sChinese = cs.getDouble(cs.getColumnIndex("sChinese"));
+					double sMath = cs.getDouble(cs.getColumnIndex("sMath"));
+					double sEnglish = cs.getDouble(cs.getColumnIndex("sEnglish"));
+					double sPhysics = cs.getDouble(cs.getColumnIndex("sPhysics"));
+					double sChemistry = cs.getDouble(cs.getColumnIndex("sChemistry"));
+					double sBiology = cs.getDouble(cs.getColumnIndex("sBiology"));
 					double sTotal = cs.getDouble(cs.getColumnIndex("sTotal"));
 					String sTime = cs.getString(cs.getColumnIndex("sTime"));
-					Science sci = new Science();
-					sci.setsTotal(sTotal);
-					sci.setsTime(sTime);
-					al.add(sci);
+					if(sChinese!=0.0 && sMath!=0.0 && sEnglish!=0.0 && sPhysics!=0.0 && sChemistry!=0.0 && sBiology!=0.0) {
+						Science sci = new Science();
+						sci.setsTotal(sTotal);
+						sci.setsTime(sTime);
+						al.add(sci);
+					}
+					
 				} while (cs.moveToNext());
 			}
 			cs.close();

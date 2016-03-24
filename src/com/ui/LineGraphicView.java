@@ -112,7 +112,7 @@ public class LineGraphicView extends View
 		// 点的操作设置
 		mPoints = getPoints();
 
-		mPaint.setColor(res.getColor(R.color.color_ff4631));
+		mPaint.setColor(res.getColor(R.color.color_000000));
 		mPaint.setStrokeWidth(dip2px(2.5f));
 		mPaint.setStyle(Style.STROKE);
 		if (mStyle == Linestyle.Curve)

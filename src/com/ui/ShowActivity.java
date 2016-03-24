@@ -56,7 +56,7 @@ public class ShowActivity extends BaseActivity {
 				yList.add(art.getaChinese());
 				xRawDatas.add(art.getaTime());
 			}
-			tu.setData(yList, xRawDatas, 100, 20);
+			tu.setData(yList, xRawDatas, 150, 30);
 			break;
 		case 2:
 			// 如果是2那么查询文科数学成绩
@@ -67,7 +67,7 @@ public class ShowActivity extends BaseActivity {
 				yList.add(art.getaMath());
 				xRawDatas.add(art.getaTime());
 			}
-			tu.setData(yList, xRawDatas, 100, 20);
+			tu.setData(yList, xRawDatas, 150, 30);
 			break;
 		case 3:
 			// 如果是3那么查询文科英语成绩
@@ -78,7 +78,7 @@ public class ShowActivity extends BaseActivity {
 				yList.add(art.getaEnglish());
 				xRawDatas.add(art.getaTime());
 			}
-			tu.setData(yList, xRawDatas, 100, 20);
+			tu.setData(yList, xRawDatas, 150, 30);
 			break;
 		case 4:
 			// 如果是4那么查询文科政治成绩
@@ -133,7 +133,7 @@ public class ShowActivity extends BaseActivity {
 				yList.add(sci.getsChinese());
 				xRawDatas.add(sci.getsTime());
 			}
-			tu.setData(yList, xRawDatas, 100, 20);
+			tu.setData(yList, xRawDatas, 150, 30);
 			break;
 		case 9:// 如果是9那么查询理科数学成绩
 			als = new InforController().searchScienceMath(MyApplication.getUser().getuId());
@@ -143,7 +143,7 @@ public class ShowActivity extends BaseActivity {
 				yList.add(sci.getsMath());
 				xRawDatas.add(sci.getsTime());
 			}
-			tu.setData(yList, xRawDatas, 100, 20);
+			tu.setData(yList, xRawDatas, 150, 30);
 			break;
 		case 10:// 如果是10那么查询理科外语成绩
 			als = new InforController().searchScienceEnglish(MyApplication.getUser().getuId());
@@ -153,7 +153,7 @@ public class ShowActivity extends BaseActivity {
 				yList.add(sci.getsEnglish());
 				xRawDatas.add(sci.getsTime());
 			}
-			tu.setData(yList, xRawDatas, 100, 20);
+			tu.setData(yList, xRawDatas, 150, 30);
 			break;
 		case 11:// 如果是11那么查询理科物理成绩
 			als = new InforController().searchSciencePhysical(MyApplication.getUser().getuId());
@@ -163,7 +163,7 @@ public class ShowActivity extends BaseActivity {
 				yList.add(sci.getsPhysics());
 				xRawDatas.add(sci.getsTime());
 			}
-			tu.setData(yList, xRawDatas, 100, 20);
+			tu.setData(yList, xRawDatas, 120, 30);
 			break;
 		case 12:// 如果是12那么查询理科化学成绩
 			als = new InforController().searchScienceChemistry(MyApplication.getUser().getuId());
@@ -173,7 +173,7 @@ public class ShowActivity extends BaseActivity {
 				yList.add(sci.getsChemistry());
 				xRawDatas.add(sci.getsTime());
 			}
-			tu.setData(yList, xRawDatas, 100, 20);
+			tu.setData(yList, xRawDatas, 120, 30);
 			break;
 		case 13:// 如果是13那么查询理科生物成绩
 			als = new InforController().searchScienceBiology(MyApplication.getUser().getuId());
