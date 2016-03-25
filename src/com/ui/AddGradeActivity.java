@@ -55,12 +55,12 @@ public class AddGradeActivity extends BaseActivity {
 		history = (EditText) findViewById(R.id.addHistory);
 		geography = (EditText) findViewById(R.id.addGeography);
 		
-		chinese.setText("0.0");
-		math.setText("0.0");
-		english.setText("0.0");
-		politics.setText("0.0");
-		history.setText("0.0");
-		geography.setText("0.0");
+		chinese.setText("0");
+		math.setText("0");
+		english.setText("0");
+		politics.setText("0");
+		history.setText("0");
+		geography.setText("0");
 		submit = (Button) findViewById(R.id.addGrade);
 		
 		submit.setOnClickListener(new OnClickListener() {
@@ -180,6 +180,19 @@ public class AddGradeActivity extends BaseActivity {
 						});
 						dialog.show();
 						geography.requestFocus();
+					}else if(dchinese==0.0 && dmath==0 && denglish==0 && dpolitics==0 && dhistory==0 && dgeography==0) {
+						AlertDialog.Builder dialog = new AlertDialog.Builder(AddGradeActivity.this);
+						dialog.setTitle("添加成绩失败");
+						dialog.setMessage("请输入有效成绩");
+						dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface arg0, int arg1) {
+								// TODO Auto-generated method stub
+								
+							}
+						});
+						dialog.show();
+						chinese.requestFocus();
 					}else{
 						DateFormat format= new SimpleDateFormat("yyyy.MM.dd");   
 						Art art = new Art();
@@ -206,12 +219,12 @@ public class AddGradeActivity extends BaseActivity {
 								}
 							});
 							dialog.show();
-							chinese.setText("0.0");
-							math.setText("0.0");
-							english.setText("0.0");
-							politics.setText("0.0");
-							history.setText("0.0");
-							geography.setText("0.0");
+							chinese.setText("0");
+							math.setText("0");
+							english.setText("0");
+							politics.setText("0");
+							history.setText("0");
+							geography.setText("0");
 						}else{
 							AlertDialog.Builder dialog = new AlertDialog.Builder(AddGradeActivity.this);
 							dialog.setTitle("添加成绩失败");

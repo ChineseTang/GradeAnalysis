@@ -34,14 +34,14 @@
                 android:layout_height="50dp"
                 >
                 <TextView
-                    android:textSize="8pt"
+                    android:textSize="18sp"
                     android:paddingLeft="13dp"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:text="语 文"
                     android:layout_weight="1"/>
                 <EditText
-                    android:textSize="8pt"
+                    android:textSize="18sp"
                     android:textColor="#666"
                     android:id="@+id/addChinese"
                     android:paddingLeft="10dp"
@@ -65,14 +65,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="50dp">
                 <TextView
-                    android:textSize="8pt"
+                    android:textSize="18sp"
                     android:paddingLeft="15dp"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:text="数 学"
                     android:layout_weight="1"/>
                 <EditText
-                    android:textSize="8pt"
+                    android:textSize="18sp"
                     android:textColor="#666"
                     android:id="@+id/addMath"
                     android:paddingLeft="10dp"
@@ -96,14 +96,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="50dp">
                 <TextView
-                    android:textSize="8pt"
+                    android:textSize="18sp"
                     android:paddingLeft="15dp"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:text="英 语"
                     android:layout_weight="1"/>
                 <EditText
-                    android:textSize="8pt"
+                     android:textSize="18sp"
                     android:textColor="#666"
                     android:id="@+id/addEnglish"
                     android:paddingLeft="10dp"
@@ -127,14 +127,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="50dp">
                 <TextView
-                    android:textSize="8pt"
+                     android:textSize="18sp"
                     android:paddingLeft="15dp"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:text="政 治"
                     android:layout_weight="1"/>
                 <EditText
-                    android:textSize="8pt"
+                     android:textSize="18sp"
                     android:textColor="#666"
                     android:id="@+id/addPolitics"
                     android:paddingLeft="10dp"
@@ -158,14 +158,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="50dp">
                 <TextView
-                    android:textSize="8pt"
+                  android:textSize="18sp"
                     android:paddingLeft="15dp"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:text="历 史"
                     android:layout_weight="1"/>
                 <EditText
-                    android:textSize="8pt"
+                    android:textSize="18sp"
                     android:textColor="#666"
                     android:id="@+id/addHistory"
                     android:paddingLeft="10dp"
@@ -189,14 +189,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="50dp">
                 <TextView
-                    android:textSize="8pt"
+                 android:textSize="18sp"
                     android:paddingLeft="15dp"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:text="地 理"
                     android:layout_weight="1"/>
                 <EditText
-                    android:textSize="8pt"
+                    android:textSize="18sp"
                     android:textColor="#666"
                     android:id="@+id/addGeography"
                     android:paddingLeft="10dp"

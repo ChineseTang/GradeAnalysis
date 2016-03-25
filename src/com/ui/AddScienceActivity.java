@@ -51,12 +51,12 @@ public class AddScienceActivity extends BaseActivity {
 		physical = (EditText) findViewById(R.id.addPhysical);
 		chemistry = (EditText) findViewById(R.id.addChemistry);
 		biology = (EditText) findViewById(R.id.addBiology);
-		chinese.setText("0.0");
-		math.setText("0.0");
-		english.setText("0.0");
-		physical.setText("0.0");
-		chemistry.setText("0.0");
-		biology.setText("0.0");
+		chinese.setText("0");
+		math.setText("0");
+		english.setText("0");
+		physical.setText("0");
+		chemistry.setText("0");
+		biology.setText("0");
 		submit = (Button) findViewById(R.id.addSGrade);
 		
 		submit.setOnClickListener(new OnClickListener() {
@@ -175,6 +175,19 @@ public class AddScienceActivity extends BaseActivity {
 							});
 							dialog.show();
 							biology.requestFocus();
+						}else if(dchinese==0 && dmath==0 && denglish==0 && dphysical==0 && dchemistry==0 && dbiology==0) {
+							AlertDialog.Builder dialog = new AlertDialog.Builder(AddScienceActivity.this);
+							dialog.setTitle("添加成绩失败");
+							dialog.setMessage("请输入有效成绩");
+							dialog.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+								@Override
+								public void onClick(DialogInterface arg0, int arg1) {
+									// TODO Auto-generated method stub
+									
+								}
+							});
+							dialog.show();
+							chinese.requestFocus();
 						}else{
 						
 							DateFormat format= new SimpleDateFormat("yyyy.MM.dd");  
@@ -202,12 +215,12 @@ public class AddScienceActivity extends BaseActivity {
 								}
 							});
 								dialog.show();
-								chinese.setText("0.0");
-								math.setText("0.0");
-								english.setText("0.0");
-								physical.setText("0.0");
-								chemistry.setText("0.0");
-								biology.setText("0.0");
+								chinese.setText("0");
+								math.setText("0");
+								english.setText("0");
+								physical.setText("0");
+								chemistry.setText("0");
+								biology.setText("0");
 							}else{
 								AlertDialog.Builder dialog = new AlertDialog.Builder(AddScienceActivity.this);
 								dialog.setTitle("添加成绩失败");
