@@ -1,14 +1,15 @@
 package com.ui;
 
-import com.controller.ActivityCollector;
-
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+
+import com.controller.ActivityCollector;
 
 public class TitleLayout extends LinearLayout {
 	public TitleLayout(Context context,AttributeSet attrs) {
@@ -26,6 +27,7 @@ public class TitleLayout extends LinearLayout {
 			@Override
 			public void onClick(View arg0) {
 				ActivityCollector.finishAll();
+				System.exit(0);  
 			}
 		});
 	}

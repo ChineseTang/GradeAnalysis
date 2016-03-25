@@ -155,8 +155,8 @@ public class LineGraphicView extends View
 			xList.add(blwidh + (canvasWidth - blwidh) / yRawData.size() * i);
 			canvas.drawLine(blwidh + (canvasWidth - blwidh) / yRawData.size() * i, marginTop, blwidh
 					+ (canvasWidth - blwidh) / yRawData.size() * i, bheight + marginTop, mPaint);
-			drawText(xRawDatas.get(i), blwidh + (canvasWidth - blwidh) / yRawData.size() * i, bheight + dip2px(26),
-					canvas);// X×ø±ê
+			//drawText(xRawDatas.get(i), blwidh + (canvasWidth - blwidh) / yRawData.size() * i, bheight + dip2px(26),
+					//canvas);// X×ø±ê
 		}
 	}
 
